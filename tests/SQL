@@ -1,0 +1,19 @@
+
+if ( ! $user ) {
+
+    "SELECT a.email FROM 'address' AS a
+    JOIN 'user' AS u ON a.email = u.email";
+
+} else {
+    
+    if ( $profile['email'] == $user['email'] ) {
+
+        "SELECT p.email FROM 'profile' AS p
+        JOIN 'user' AS u ON p.email = u.email";
+
+        } else {
+
+            $user = TRUE;
+        
+        }
+}
